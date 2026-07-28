@@ -1,0 +1,138 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Meiryo", "メイリオ", sans-serif;
+    color: #333333;
+    background-color: #ffffff;
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #dddddd;
+    transition: background-color 0.3s;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.theme-btn {
+    padding: 8px 16px;
+    border: 1px solid #333333;
+    border-radius: 20px;
+    background-color: transparent;
+    color: inherit;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.theme-btn:hover {
+    opacity: 0.7;
+}
+
+.hero {
+    position: relative;
+    height: 300px;
+    overflow: hidden;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.7); 
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6); 
+    width: 100%;
+    text-align: center;
+    z-index: 10; 
+    font-size: 1.5rem; 
+}
+
+.section {
+    max-width: 800px;
+    margin: 60px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.menu-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.menu-item {
+    border: 1px solid #dddddd;
+    padding: 20px;
+    border-radius: 8px;
+    width: 220px;
+}
+
+.menu-item img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-top: 1px solid #dddddd;
+    margin-top: 40px;
+}
+
+body.dark-theme {
+    background-color: #1a1a1a;
+    color: #f0f0f0;
+}
+
+body.dark-theme .header,
+body.dark-theme footer {
+    background-color: #2a2a2a;
+    border-color: #444444;
+}
+
+body.dark-theme .hero {
+    background-color: #3a3227;
+    color: #f0f0f0;
+}
+
+body.dark-theme .menu-item {
+    border-color: #444444;
+    background-color: #2a2a2a;
+}
+
+body.dark-theme .theme-btn {
+    border-color: #ffffff;
+}
